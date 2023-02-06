@@ -1,0 +1,58 @@
+<h1>Director <%= @dir_id %> Details</h1>
+
+<a href="/directors" class="btn btn-block btn-outline-secondary">
+  Go back
+</a>
+
+
+&nbsp;|&nbsp;
+
+
+<a href="/delete_director/<%=@dir_id%>" class="btn btn-block btn-outline-secondary">
+  Delete director
+  <small>(Building this link is not required. It's an optional stretch goal; but, you have the tools if you want to give it a try.)</small>
+</a>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%=@the_director%>
+  </dd>
+
+  <dt>
+    Dob
+  </dt>
+  <dd>
+    <%= @the_director.dob.strftime("%B %e, %Y")%>
+  </dd>
+
+  <dt>
+    Bio
+  </dt>
+  <dd>
+    <%= @the_director.bio%>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="https://image.tmdb.org/t/p/w500/6U1eHg30snkOhSM9WJT2asAesR9.jpg" style="width:250px;">
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    over 7 years ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    over 7 years ago
+  </dd>
+</dl>
